@@ -31,4 +31,11 @@ src="https://github.com/user-attachments/assets/ca35703a-e970-4f79-8563-31362129
 src="https://github.com/user-attachments/assets/c932e8ef-bf9a-474b-a709-53bfc0aeee55" alt="Task Icon"/>
 <img
 src="https://github.com/user-attachments/assets/6e18d0c5-f06c-4410-b013-d62eafa4aceb" alt="Task Icon"/>
+</details>
+
 <details>
+<summary>TASK3:Identification of RISCV instructions</summary>
+  <img
+src="https://github.com/user-attachments/assets/7c267db8-2335-45b8-8d9b-0cce32154878" alt="Task Icon"/>
+
+</details>
