@@ -37,5 +37,171 @@ src="https://github.com/user-attachments/assets/6e18d0c5-f06c-4410-b013-d62eafa4
 <summary>TASK3:Identification of RISCV instructions</summary>
   <img
 src="https://github.com/user-attachments/assets/e82da314-af58-47fb-b68a-eb1a51822319" alt="Task Icon"/>
+<summary>1. lui a0, 0x2b</summary>
+
+Opcode(LUI): 0110111  
+Immediate (0x2b << 12): 0000000000101011  
+Register (rd): a0 = 01010  
+
+| imm[31:12]      | rd      | opcode  |
+|------------------|---------|---------|
+| 0000000000101011 | 01010   | 0110111 |
+
+ ---                   
+<summary>2. addi sp, sp, -32</summary>
+
+Opcode(ADDI): 0010011  
+Immediate: -32 = 11111111111111100000 (12 bits)  
+Registers: sp(rd) = 00010, sp(rs1) = 00010  
+
+| imm[11:0]       | rs1    | funct3 | rd    | opcode  |
+|------------------|--------|--------|-------|---------|
+| 111111111110     | 00010  | 000    | 00010 | 0010011 |
+
+---
+<summary>3. sd ra, 24(sp)</summary>
+
+Opcode(SD): 0100111  
+Immediate: 24 (split into two parts: imm[11:5] and imm[4:0])  
+Registers: rs1 = sp = 00010, rs2 = ra = 00001  
+
+| imm[11:5] | rs2   | rs1   | funct3 | imm[4:0] | opcode  |
+|-----------|-------|-------|--------|----------|---------|
+| 0000001   | 00001 | 0010  | 011    | 11000    | 0100111 |
+
+---
+
+<summary>4. jal ra, 10448</summary>
+
+Opcode(JAL): 1101111  
+Immediate: 10448  
+Register (rd): ra = 00001  
+
+| imm[20] | imm[10:1] | imm[11] | imm[19:12] | rd    | opcode  |
+|---------|-----------|---------|------------|-------|---------|
+| 001110  | 000100000 | 00000   | 000000000  | 00001 | 1101111 |
+
+---
+
+<summary>5. add a0, a1, a5</summary>
+
+Opcode(ADD): 0110011  
+Registers: rd = a0 = 01010, rs1 = a1 = 01011, rs2 = a5 = 01000  
+Funct3: 000  
+Funct7: 0000000  
+
+| funct7   | rs2   | rs1   | funct3 | rd    | opcode  |
+|----------|-------|-------|--------|-------|---------|
+| 0000000  | 01000 | 01011 | 000    | 01010 | 0110011 |
+
+---
+
+<summary>6. addw a1, a1, a5</summary>
+
+Opcode(ADDW): 0111011  
+Registers: rd = a1 = 01011, rs1 = a1 = 01011, rs2 = a5 = 01000  
+Funct3: 000  
+Funct7: 0000000  
+
+| funct7   | rs2   | rs1   | funct3 | rd    | opcode  |
+|----------|-------|-------|--------|-------|---------|
+| 0000000  | 01000 | 01011 | 000    | 01011 | 0111011 |
+
+---
+
+<summary>7. ld ra, 24(sp)</summary>
+
+Opcode(LD): 0000011  
+Immediate: 24  
+Registers: rd = ra = 00001, rs1 = sp = 00010  
+
+| imm[11:0]      | rs1   | funct3 | rd    | opcode  |
+|-----------------|-------|--------|-------|---------|
+| 000000011000    | 00010 | 011    | 00001 | 0000011 |
+
+---
+
+<summary>8. lw a1, 8(sp)</summary>
+
+Opcode(LW): 0000011  
+Immediate: 8  
+Registers: rd = a1 = 01011, rs1 = sp = 00010  
+
+| imm[11:0]      | rs1   | funct3 | rd    | opcode  |
+|-----------------|-------|--------|-------|---------|
+| 000000001000    | 00010 | 010    | 01011 | 0000011 |
+
+
+<summary>9. li a0, 0</summary>
+
+Opcode(ADDI): 0010011  
+Immediate: 0  
+Registers: rd = a0 = 01010, rs1 = x0 = 00000  
+
+| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
+|---------------|-------|--------|-------|---------|
+| 000000000000  | 00000 | 000    | 01010 | 0010011 |
+
+---
+
+<summary>10. jalr x0, 0(ra)</summary>
+
+| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
+|---------------|-------|--------|-------|---------|
+| 000000000000  | 00001 | 000    | 00000 | 1100111 |
+
+---
+
+<summary>11. addi a0, a0, -920</summary>
+
+Opcode(ADDI): 0010011  
+Registers: rd = a0 = 01010, rs1 = a0 = 01010  
+Immediate: -920 = 111110100110 (sign-extended 12-bit value)  
+
+| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
+|---------------|-------|--------|-------|---------|
+| 111101011100  | 01010 | 000    | 01010 | 0010011 |
+
+---
+
+<summary>12. sd s0, 16(sp)</summary>
+
+Opcode(SD): 0100111  
+Registers: rs1 = sp = 00010, rs2 = s0 = 10000  
+Immediate: 16 (split into imm[11:5] and imm[4:0])  
+imm[11:5] = 0000000, imm[4:0] = 10000  
+
+| imm[11:5]     | rs2   | rs1   | funct3 | imm[4:0] | opcode  |
+|---------------|-------|-------|--------|----------|---------|
+| 0000001       | 10000 | 00010 | 011    | 10000    | 0100111 |
+
+---
+
+<summary>13. lw a5, 12(sp)</summary>
+
+Opcode(LW): 0000011  
+Registers: rd = a5 = 01000, rs1 = sp = 00010  
+Immediate: 12 = 000000001100  
+
+| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
+|---------------|-------|--------|-------|---------|
+| 000000001100  | 00010 | 010    | 01000 | 0000011 |
+
+---
+
+<summary>14. jal ra, 10448</summary>  
+
+| imm[20|10:1|11|19:12] | rd    | opcode |
+
+| 00111000010000000000  | 00001 | 1101111 |</summary>
+
+
+---
+
+<summary>15. add a1, a1, a5</summary>
+
+| funct7   | rs2   | rs1   | funct3 | rd    | opcode  |
+|----------|-------|-------|--------|-------|---------|
+| 0000000  | 01000 | 01011 | 000    | 01010 | 0110011 |
 
 </details>
