@@ -83,7 +83,7 @@ Register (rd): ra = 00001
 
 ---
 
-<summary>7. ld ra, 24(sp)</summary>
+<summary>5. ld ra, 24(sp)</summary>
 
 Opcode(LD): 0000011  
 Immediate: 24  
@@ -95,7 +95,7 @@ Registers: rd = ra = 00001, rs1 = sp = 00010
 
 ---
 
-<summary>8. lw a1, 8(sp)</summary>
+<summary>6. lw a1, 8(sp)</summary>
 
 Opcode(LW): 0000011  
 Immediate: 8  
@@ -107,7 +107,7 @@ Registers: rd = a1 = 01011, rs1 = sp = 00010
 
 ---
 
-<summary>9. li a0, 0</summary>
+<summary>7. li a0, 0</summary>
 
 Opcode(ADDI): 0010011  
 Immediate: 0  
@@ -119,7 +119,7 @@ Registers: rd = a0 = 01010, rs1 = x0 = 00000
 
 ---
 
-<summary>10. jalr x0, 0(ra)</summary>
+<summary>8. jalr x0, 0(ra)</summary>
 
 | imm[11:0]     | rs1   | funct3 | rd    | opcode  |
 |---------------|-------|--------|-------|---------|
@@ -127,7 +127,32 @@ Registers: rd = a0 = 01010, rs1 = x0 = 00000
 
 ---
 
-<summary>13. lw a5, 12(sp)</summary>
+<summary>9. addi a0, a0, -920</summary>
+
+Opcode(ADDI): 0010011  
+Registers: rd = a0 = 01010, rs1 = a0 = 01010  
+Immediate: -920 = 110001101000 (sign-extended 12-bit value)  
+
+| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
+|---------------|-------|--------|-------|---------|
+| 110001101000  | 01010 | 000    | 01010 | 0010011 |
+
+---
+
+<summary>10. sd s0, 16(sp)</summary>
+
+Opcode(SD): 0100111  
+Registers: rs1 = sp = 00010, rs2 = s0 = 01000  
+Immediate: 16 (split into imm[11:5] and imm[4:0])  
+imm[11:5] = 0000000, imm[4:0] = 10000  
+
+| imm[11:5]     | rs2   | rs1   | funct3 | imm[4:0] | opcode  |
+|---------------|-------|-------|--------|----------|---------|
+| 0000001       | 01000 | 00010 | 011    | 10000    | 0100111 |
+
+---
+
+<summary>11. lw a5, 12(sp)</summary>
 
 Opcode(LW): 0000011  
 Registers: rd = a5 = 01000, rs1 = sp = 00010  
@@ -139,15 +164,7 @@ Immediate: 12 = 000000001100
 
 ---
 
-<summary>14. jal ra, 10448</summary>  
-
-| imm[20|10:1|11|19:12] | rd    | opcode |
-
-| 00111000010000000000  | 00001 | 1101111 |</summary>
-
----
-
-<summary>15. add a1, a1, a5</summary>
+<summary>12. add a1, a1, a5</summary>
 Opcode: 0110011
 
 | funct7   | rs2   | rs1   | funct3 | rd    | opcode  |
@@ -156,7 +173,7 @@ Opcode: 0110011
 
 ---
 
-<summary>5. add a0, a1, a5</summary>
+<summary>13. add a0, a1, a5</summary>
 
 Opcode(ADD): 0110011  
 Registers: rd = a0 = 01010, rs1 = a1 = 01011, rs2 = a5 = 01000  
@@ -169,7 +186,7 @@ Funct7: 0000000
 
 ---
 
-<summary>6. addw a1, a1, a5</summary>
+<summary>14. addw a1, a1, a5</summary>
 
 Opcode(ADDW): 0111011  
 Registers: rd = a1 = 01011, rs1 = a1 = 01011, rs2 = a5 = 01000  
@@ -182,29 +199,8 @@ Funct7: 0000000
 
 ---
 
-<summary>11. addi a0, a0, -920</summary>
 
-Opcode(ADDI): 0010011  
-Registers: rd = a0 = 01010, rs1 = a0 = 01010  
-Immediate: -920 = 111110100110 (sign-extended 12-bit value)  
 
-| imm[11:0]     | rs1   | funct3 | rd    | opcode  |
-|---------------|-------|--------|-------|---------|
-| 111101011100  | 01010 | 000    | 01010 | 0010011 |
 
----
-
-<summary>12. sd s0, 16(sp)</summary>
-
-Opcode(SD): 0100111  
-Registers: rs1 = sp = 00010, rs2 = s0 = 10000  
-Immediate: 16 (split into imm[11:5] and imm[4:0])  
-imm[11:5] = 0000000, imm[4:0] = 10000  
-
-| imm[11:5]     | rs2   | rs1   | funct3 | imm[4:0] | opcode  |
-|---------------|-------|-------|--------|----------|---------|
-| 0000001       | 10000 | 00010 | 011    | 10000    | 0100111 |
-
----
 
 </details>
