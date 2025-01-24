@@ -205,3 +205,7 @@ Register (rd): a0 = 01010
 |000000000000|	00000	|000	|01010	|0010011|
 ---
 </details>
+<details>
+<summary>TASK4:Functional Simulation of RISC-V Core</summary>
+
+</details>
