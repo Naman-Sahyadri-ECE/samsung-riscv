@@ -231,7 +231,7 @@ Install iverlog using commands:
 
 32-bits instruction used in the code:
 
-![Instructions](<Task4/instructions.png>)
+![Instructions](<TASK4/instructions.png>)
 
 Analysing the Output Waveform of various instructions that we have covered in this task.
 
