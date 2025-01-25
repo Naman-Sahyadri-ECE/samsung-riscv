@@ -207,5 +207,67 @@ Register (rd): a0 = 01010
 </details>
 <details>
 <summary>TASK4:Functional Simulation of RISC-V Core</summary>
+</summary>
+<br>
+Steps to perform functional simulation of RISCV
 
+1. Download Files:
+Download the code from the reference github repo.
+
+2. Set Up Simulation Environment:
+Install iverlog using commands:
+
+        sudo apt-get install iverilog
+        sudo apt install gtkwave
+
+3. To run and simulate the verilog code, enter the following command:
+
+        iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+        ./iiitb_rv32i
+
+4. To see the simulation waveform in GTKWave, enter the following command:
+
+        gtkwave iiitb_rv32i.vcd
+
+32-bits instruction used in the code:
+
+![Instructions](<Task4/instructions.png>)
+
+Analysing the Output Waveform of various instructions that we have covered in this task.
+
+1. ADD R6,R1,R2
+
+![ADD R6,R1,R2](<>)
+
+2. SUB R7,R1,R2
+
+![SUB R7,R1,R2](<>)
+
+3. And R8,R1,R3
+
+![And R8,R1,R3](<>)
+
+4. OR R9,R2,R5
+
+![OR R9,R2,R5](<>)
+
+5. XOR R10,R1,R4
+
+![XOR R10,R1,R4](<>)
+
+6. SLT R11,R2,R4
+
+![SLT R11,R2,R4](<>)
+
+7. ADDI R12,R4,5
+
+![ADDI R12,R4,5](<>)
+
+8. BEQ R0,R0,15
+
+![BEQ R0,R0,15](<>)
+
+9. ADD R14,R2,R2
+
+![ADD R14,R2,R2](<>)
 </details>
