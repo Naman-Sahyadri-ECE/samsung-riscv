@@ -217,7 +217,7 @@ Download the code from the reference github repo.
 2. Set Up Simulation Environment:
 Install iverlog using commands:
 
-        sudo apt-get install iverilog
+        sudo apt install iverilog
         sudo apt install gtkwave
 
 3. To run and simulate the verilog code, enter the following command:
@@ -239,7 +239,7 @@ Analysing the Output Waveform of various instructions that we have covered in th
 
 ![ADD R6,R1,R2](<TASK4/add.png>)
 
-32 bit instruction:32'h02208300
+  32 bit instruction:32'h02208300
 
 2. SUB R7,R1,R2
 
