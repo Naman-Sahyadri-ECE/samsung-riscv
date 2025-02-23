@@ -284,3 +284,7 @@ Analysing the Output Waveform of various instructions that we have covered in th
 32 bit instruction:32'h00f00002
 
 </details>
+<details>
+<summary>TASK5:Functional Simulation of RISC-V Core</summary>
+</summary>
+<br>
