@@ -285,6 +285,7 @@ Analysing the Output Waveform of various instructions that we have covered in th
 
 </details>
 <details>
-<summary>TASK5:Functional Simulation of RISC-V Core</summary>
+<summary>TASK5:Project overview-circuit diagram</summary>
 </summary>
 <br>
+(<TASK4/instructions.png>)
