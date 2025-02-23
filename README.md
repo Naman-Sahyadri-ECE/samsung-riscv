@@ -292,7 +292,43 @@ Analysing the Output Waveform of various instructions that we have covered in th
 src="https://github.com/user-attachments/assets/0828d309-aa0c-45bc-8cce-038ce368d9bf" alt="Task Icon"/>
 <img
 
-2.Blinking Led Test code simulation.
+2.Components Required:
+
+*VSD Squadronmini CH32V00x RISC V processor
+
+ *L298N Motor Driver
+
+ *IR Sensor
+
+ *Motors (2 DC motors)
+
+ *Power Supply (12V)
+
+Pin Connections:
+
+ IR Sensor
+| Pin | CH32V00x |
+|-----|----------|
+| VCC | 5V       |
+| GND | GND      |
+| OUT | PD3      |
+
+ L298N Motor Driver
+| Pin  | CH32V00x |
+|------|----------|
+| IN1  | PD1      |
+| IN2  | PD2      |
+| IN3  | PD4      |
+| IN4  | PD7      |
+| VCC  | 5V       |
+| GND  | GND      |
+
+---
+
+![PIN CONNECTION DETAILS](https://github.com/user-attachments/assets/9ee64c69-d9b5-4627-9767-a5db0eb3a6ba)
+
+
+3.Blinking Led Test code simulation.
 
 https://github.com/user-attachments/assets/c9d04c81-f2c8-463e-9b4c-9b2137d9df15
 </details>
