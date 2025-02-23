@@ -287,5 +287,15 @@ Analysing the Output Waveform of various instructions that we have covered in th
 <details>
 <summary>TASK5:Project overview-circuit diagram</summary>
 </summary>
-<br>
-(<TASK4/instructions.png>)
+1.Pinout Diagram of Obstacle-Avoiding Robot
+<img 
+src="https://github.com/user-attachments/assets/0828d309-aa0c-45bc-8cce-038ce368d9bf" alt="Task Icon"/>
+<img
+
+2.Blinking Led Test code simulation.
+![Instructions](<TASK4/instructions.png>)
+
+
+
+
+
