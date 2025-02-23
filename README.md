@@ -317,7 +317,7 @@ https://github.com/user-attachments/assets/11397a90-0576-4397-b83f-7a6ea71d9968
 #define ENA_PIN GPIO_Pin_5 // Assuming ENA is connected to PA0 (PWM), not necessary
 #define ENB_PIN GPIO_Pin_6 // Assuming ENB is connected to PA1 (PWM), not necessary
 
-// Define PIR sensor pin
+// Define IR sensor pin
 #define PIR_PIN GPIO_Pin_3
 
 void Motor_Init(void) {
