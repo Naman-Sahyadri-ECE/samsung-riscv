@@ -293,11 +293,16 @@ src="https://github.com/user-attachments/assets/0828d309-aa0c-45bc-8cce-038ce368
 <img
 
 2.Blinking Led Test code simulation.
-![Demo](https://user-images.githubusercontent.com/your-uploaded-video.mp4)
 
+https://github.com/user-attachments/assets/c9d04c81-f2c8-463e-9b4c-9b2137d9df15
+</details>
 
+<details>
+<summary>TASK6:Project Application</summary>
+</summary>
+1.Obstacle-Avoiding Robot Application video.
 
+https://github.com/user-attachments/assets/11397a90-0576-4397-b83f-7a6ea71d9968
 
-
-
+2.Obstacle-Avoiding Robot Code
 
